@@ -1,0 +1,41 @@
+name: Daily ML Project Release
+
+# Runs automatically once per day, and can also be triggered manually
+# from the Actions tab (workflow_dispatch).
+on:
+  schedule:
+    # 03:30 UTC daily = 09:00 IST. Adjust the cron if you want another time.
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+# Allow the workflow to push commits back to the repository.
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publish next project
+        run: python scripts/release_daily.py
+
+      - name: Commit and push if there are changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            latest=$(ls -d published/*/ 2>/dev/null | tail -n 1 | xargs -n1 basename)
+            git commit -m "Publish daily ML project: ${latest}"
+            git push
+          else
+            echo "No changes to commit (all projects may already be published)."
+          fi
