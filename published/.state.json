@@ -1,5 +1,6 @@
 {
   "published": [
-    "01-iris-classification"
+    "01-iris-classification",
+    "02-house-price-regression"
   ]
 }
