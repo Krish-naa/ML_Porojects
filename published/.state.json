@@ -2,6 +2,7 @@
   "published": [
     "01-iris-classification",
     "02-house-price-regression",
-    "03-digit-recognition"
+    "03-digit-recognition",
+    "04-customer-segmentation"
   ]
 }
