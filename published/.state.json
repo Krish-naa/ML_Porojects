@@ -3,6 +3,7 @@
     "01-iris-classification",
     "02-house-price-regression",
     "03-digit-recognition",
-    "04-customer-segmentation"
+    "04-customer-segmentation",
+    "05-breast-cancer-detection"
   ]
 }
