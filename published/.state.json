@@ -4,6 +4,7 @@
     "02-house-price-regression",
     "03-digit-recognition",
     "04-customer-segmentation",
-    "05-breast-cancer-detection"
+    "05-breast-cancer-detection",
+    "06-sentiment-analysis"
   ]
 }

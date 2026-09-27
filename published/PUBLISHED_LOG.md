@@ -9,3 +9,4 @@ This file is updated automatically by the daily workflow. Each entry records the
 | 2026-09-24 | `03-digit-recognition` | Classify 8x8 grayscale images of handwritten digits (0–9) using a Support Vector Machine. |
 | 2026-09-25 | `04-customer-segmentation` | Group customers into segments based on annual income and spending score — a common |
 | 2026-09-26 | `05-breast-cancer-detection` | Predict whether a tumor is malignant or benign from 30 cell-nucleus measurements — |
+| 2026-09-27 | `06-sentiment-analysis` | Classify short movie-review sentences as positive or negative — a first step into NLP. |
